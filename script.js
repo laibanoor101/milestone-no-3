@@ -12,9 +12,8 @@ resumeform.addEventListener('submit', function (event) {
     var education = document.getElementById("education").value;
     var skills = document.getElementById("skills").value;
     var experience = document.getElementById("experience").value;
-    //taking input to generate resume
-    var generateResume = "\n    <h2>Generated Resume</h2>\n    <h3>Personal information</h3>\n    <p><b>Name:</b> ".concat(name, "</p>\n    <p><b>Email:</b> ").concat(email, "</p>\n    <p><b>Address:</b> ").concat(address, "</p>\n    <h3>Education</h3>\n    <p>").concat(education, "</p>\n    <h3>Skills</h3>\n    <p>").concat(skills, "</p>\n    <h3>Experience</h3>\n    <p>").concat(experience, "</p>\n    ");
-    //Display resume
+    //generate resume which is editable
+    var generateResume = "\n    <h2>Generated Resume</h2>\n    <h3>Personal information</h3>\n    <p><b>Name:</b><span contenteditable=\"true\">".concat(name, "</span></p>\n    <p><b>Email:</b><span contenteditable=\"true\"> ").concat(email, "</span></p>\n    <p><b>Address:</b><span contenteditable=\"true\"> ").concat(address, "</span></p>\n    <h3>Education</h3>\n    <p contenteditable=\"true\">").concat(education, "</p>\n    <h3>Skills</h3>\n    <p contenteditable=\"true\">").concat(skills, "</p>\n    <h3>Experience</h3>\n    <p contenteditable=\"true\">").concat(experience, "</p>\n    ");
     if (resumedisplay) {
         resumedisplay.innerHTML = generateResume;
     }

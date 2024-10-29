@@ -73,6 +73,7 @@ button:hover {
     margin: auto;
     padding: 20px;
     border-radius: 20px;
+    outline: none;   /* make resume editable */
 }
 #display-resume h2 {
     color: black;

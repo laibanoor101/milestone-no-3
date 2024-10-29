@@ -15,21 +15,21 @@ resumeform.addEventListener('submit',(event:Event)=>{
     const skills =(document.getElementById("skills") as HTMLInputElement).value
     const experience =(document.getElementById("experience") as HTMLInputElement).value
 
-    //taking input to generate resume
+    //generate resume which is editable
     const generateResume = `
     <h2>Generated Resume</h2>
     <h3>Personal information</h3>
-    <p><b>Name:</b> ${name}</p>
-    <p><b>Email:</b> ${email}</p>
-    <p><b>Address:</b> ${address}</p>
+    <p><b>Name:</b><span contenteditable="true">${name}</span></p>
+    <p><b>Email:</b><span contenteditable="true"> ${email}</span></p>
+    <p><b>Address:</b><span contenteditable="true"> ${address}</span></p>
     <h3>Education</h3>
-    <p>${education}</p>
+    <p contenteditable="true">${education}</p>
     <h3>Skills</h3>
-    <p>${skills}</p>
+    <p contenteditable="true">${skills}</p>
     <h3>Experience</h3>
-    <p>${experience}</p>
+    <p contenteditable="true">${experience}</p>
     `
-    //Display resume
+
     if(resumedisplay){
         resumedisplay.innerHTML = generateResume;
     }
